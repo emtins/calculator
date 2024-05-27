@@ -8,4 +8,16 @@ int main() {
     char operation;
     double num1, num2;
 
+    do {
+        system("cls");
+        cout << "\tMENU:\n";
+        cout << "1 - Addition\n";
+        cout << "2 - Subtraction\n";
+        cout << "3 - Multiplication\n";
+        cout << "4 - Division\n";
+        cout << "\tEsc - Exit\n";
+    }
+    while (operation != 27);
+
+    return 0;
 }
