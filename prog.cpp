@@ -24,10 +24,36 @@ int main() {
             cin >> num1;
             cout << "Enter second number: ";
             cin >> num2;
+        }
 
-    }
-   
-} 
-    while (operation != 27);
+        try {
+            double result;
+            switch (operation) {
+            case '1':
+                result = calc.addition(num1, num2);
+                cout << "Result: " << result << endl;
+                break;
+            case '2':
+                result = calc.subtraction(num1, num2);
+                cout << "Result: " << result << endl;
+                break;
+            case '3':
+                result = calc.multiplication(num1, num2);
+                cout << "Result: " << result << endl;
+                break;
+            case '4':
+                result = calc.division(num1, num2);
+                cout << "Result: " << result << endl;
+                break;
+            }
+        }
+        catch (const invalid_argument& e) {
+            cout << "Error: " << e.what() << endl;
+        }
 
-return 0;
+        system("pause");
+
+    } while (operation != 27);
+
+    return 0;
+}
