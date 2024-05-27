@@ -16,8 +16,18 @@ int main() {
         cout << "3 - Multiplication\n";
         cout << "4 - Division\n";
         cout << "\tEsc - Exit\n";
+
+        operation = _getch();
+
+        if (operation >= '1' && operation <= '4') {
+            cout << "Enter first number: ";
+            cin >> num1;
+            cout << "Enter second number: ";
+            cin >> num2;
+
     }
+   
+} 
     while (operation != 27);
 
-    return 0;
-}
+return 0;
